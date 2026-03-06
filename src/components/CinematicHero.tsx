@@ -24,10 +24,10 @@ export default function CinematicHero() {
 
       <div className="relative z-10 w-full flex justify-between items-start font-inter text-sm md:text-base uppercase tracking-widest text-white/50">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-          [ DISPATCH RESPONSE &lt; 10M ]
+          [ COMPASSIONATE CARE, ANYTIME, ANYWHERE ]
         </motion.div>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
-          EST. 2024 / NATIONWIDE
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="text-primary font-bold">
+          15+ YEARS EXPERIENCE
         </motion.div>
       </div>
 
@@ -47,19 +47,19 @@ export default function CinematicHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="font-inter text-lg md:text-xl max-w-md text-white/70"
+            className="font-inter text-lg md:text-xl max-w-xl text-white/70"
           >
-            Advance life support, airborne medical transit, and rapid corporate emergency infrastructures.
+            We are committed to providing fast, reliable, and compassionate emergency medical transport 24/7. From critical ICU situations to non-emergency transfers, our highly trained team ensures safe and timely care.
           </motion.p>
           
           <motion.a 
-            href="tel:+919999999999"
+            href="tel:+918178231291"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1, type: "spring" }}
             className="flex items-center justify-center w-full md:w-auto px-12 py-6 bg-white text-black font-poppins font-black text-xl uppercase tracking-wider hover:bg-primary hover:text-white transition-colors"
           >
-            DISPATCH NOW
+            CALL +91 817 823 1291
           </motion.a>
         </div>
       </div>

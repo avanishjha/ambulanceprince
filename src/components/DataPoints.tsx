@@ -13,7 +13,7 @@ export default function DataPoints() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           
-          <div>
+          <div className="sticky top-[30vh]">
             <h2 className="font-poppins font-black text-5xl md:text-8xl leading-none tracking-tighter uppercase mb-8">
               THE <br/><span className="text-primary italic">MATH</span> OF <br/>RESCUE.
             </h2>

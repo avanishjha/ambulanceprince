@@ -6,21 +6,21 @@ import { ArrowUpRight } from 'lucide-react';
 const services = [
   {
     num: "01",
-    title: "EMERGENCY DISPATCH",
-    desc: "10-minute extraction in urban centers. Advanced Life Support protocols activated immediately upon call.",
+    title: "BASIC LIFE SUPPORT",
+    desc: "Essential transport designed to provide critical care and emergency medical assistance for non-critical patients.",
     img: "https://images.unsplash.com/photo-1587556201565-2ea642111eb3?w=1200&q=80"
   },
   {
     num: "02",
-    title: "AEROMEDICAL TRANSIT",
-    desc: "Global border crossing with ICU-equipped fixed-wing aircraft and helicopter rescue operations.",
-    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80"
+    title: "ADVANCE LIFE SUPPORT",
+    desc: "Fully equipped mobile medical units for critical care, featuring ventilators and intensive monitoring.",
+    img: "https://images.unsplash.com/photo-1516841273335-e39b37888115?w=1200&q=80"
   },
   {
     num: "03",
-    title: "CORPORATE INFRASTRUCTURE",
-    desc: "Permanent on-site medical units, event coverage, and subscription-based enterprise health networks.",
-    img: "https://images.unsplash.com/photo-1516841273335-e39b37888115?w=1200&q=80"
+    title: "ICU AMBULANCE",
+    desc: "When time is of the essence, specialized medical care on wheels can make all the difference in life-threatening emergencies.",
+    img: "https://plus.unsplash.com/premium_photo-1661608670417-104c9302ca14?w=1200&q=80"
   }
 ];
 
@@ -28,7 +28,7 @@ export default function ServiceManifesto() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-background text-foreground py-32 border-b border-border-sharp">
+    <section id="services" className="bg-background text-foreground py-32 border-b border-border-sharp">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <h2 className="font-poppins font-black text-4xl md:text-7xl uppercase tracking-tighter mb-24 max-w-4xl">
           A MANIFESTO OF <span className="text-primary italic">SURVIVAL.</span>

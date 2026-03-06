@@ -4,6 +4,7 @@ import './globals.css';
 import SmoothScroller from '@/components/SmoothScroller';
 import NavigationalHeader from '@/components/NavigationalHeader';
 import Footer from '@/components/Footer';
+import FloatingActions from '@/components/FloatingActions';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -34,6 +35,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </SmoothScroller>
+        <FloatingActions />
       </body>
     </html>
   );
