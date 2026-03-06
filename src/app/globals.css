@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+
+  /* Stark, Brutalist Colors */
+  --color-primary: #E63946;
+  --color-primary-hover: #D62828;
+  --color-background: #0A0A0A;
+  --color-foreground: #FFFFFF;
+  --color-border: #333333;
+}
+
+@layer base {
+  :root {
+    --background: #0A0A0A;
+    --foreground: #FFFFFF;
+  }
+
+  /* Lenis Smooth Scroll Recommended HTML rules */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* High contrast text selection */
+    ::selection {
+      background-color: #E63946;
+      color: #FFFFFF;
+    }
+  }
+
+  /* Utility class for crisp 1px borders */
+  .border-sharp {
+    border-color: var(--color-border);
+  }
+}
