@@ -4,7 +4,7 @@ import { Send } from 'lucide-react';
 
 export default function AppointmentForm() {
   return (
-    <section id="appointment" className="bg-gray-50 text-gray-900 py-24 md:py-32 border-b border-gray-200 relative overflow-hidden">
+    <section id="appointment" className="bg-gray-50 text-gray-900 py-16 md:py-32 border-b border-gray-200 relative overflow-hidden">
       
       {/* Accent block */}
       <div className="absolute bottom-0 left-0 w-2 h-full bg-primary" />
@@ -76,8 +76,8 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Choose Doctor / Unit</label>
-              <select className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
-                <option value="" disabled selected>SELECT UNIT</option>
+              <select defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
+                <option value="" disabled>SELECT UNIT</option>
                 <option value="paramedic">Paramedic Team</option>
                 <option value="doctor">Specialized Doctor</option>
                 <option value="general">General Transport</option>
@@ -86,8 +86,8 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2 md:col-span-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Select Services</label>
-              <select className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
-                <option value="" disabled selected>SELECT SERVICE</option>
+              <select defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
+                <option value="" disabled>SELECT SERVICE</option>
                 <option value="bls">Basic Life Support (BLS)</option>
                 <option value="als">Advance Life Support (ALS)</option>
                 <option value="icu">ICU Ambulance</option>

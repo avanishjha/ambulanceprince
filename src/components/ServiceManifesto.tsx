@@ -34,7 +34,7 @@ export default function ServiceManifesto() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <section id="services" className="bg-gray-50 text-gray-900 py-24 md:py-32 border-b border-gray-200">
+    <section id="services" className="bg-gray-50 text-gray-900 py-16 md:py-32 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 md:mb-24">

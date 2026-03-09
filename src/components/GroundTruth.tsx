@@ -25,7 +25,7 @@ export default function GroundTruth() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="bg-white text-gray-900 py-24 md:py-32 border-b border-gray-200 overflow-hidden">
+    <section className="bg-white text-gray-900 py-16 md:py-32 border-b border-gray-200 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">

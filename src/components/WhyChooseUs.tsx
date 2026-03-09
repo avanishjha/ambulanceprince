@@ -58,7 +58,7 @@ const item = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-24 md:py-32 border-b border-gray-200">
+    <section className="bg-white py-16 md:py-32 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         
         {/* Section Header */}

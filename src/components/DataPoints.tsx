@@ -46,15 +46,15 @@ const metrics = [
 
 export default function DataPoints() {
   return (
-    <section className="bg-gray-50 text-gray-900 py-32 border-b border-gray-200 relative overflow-hidden">
+    <section className="bg-gray-50 text-gray-900 py-16 md:py-32 border-b border-gray-200 relative overflow-hidden">
       
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/[0.02] -skew-x-12 transform origin-top-right" />
       
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
-          <div className="sticky top-[30vh]">
+          <div className="relative lg:sticky lg:top-[30vh]">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -85,7 +85,7 @@ export default function DataPoints() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col md:flex-row items-baseline gap-6 md:gap-12 pb-8 border-b border-gray-200 group"
+                className="flex flex-col md:flex-row items-start md:items-baseline gap-2 md:gap-12 pb-8 border-b border-gray-200 group"
               >
                 <AnimatedCounter target={item.value} suffix={item.suffix} />
                 <div>

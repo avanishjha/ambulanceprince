@@ -14,7 +14,7 @@ const airRoutes = [
 
 export default function ServiceLocations() {
   return (
-    <section className="bg-white text-gray-900 py-24 md:py-32 border-b border-gray-200">
+    <section className="bg-white text-gray-900 py-16 md:py-32 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">

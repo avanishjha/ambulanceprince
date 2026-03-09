@@ -20,7 +20,7 @@ export default function FleetShowcase() {
     <section ref={targetRef} className="relative h-[300vh] bg-gray-50">
       <div className="sticky top-0 h-screen flex items-center overflow-hidden border-b border-gray-200">
         
-        <div className="absolute top-12 left-6 md:left-12 z-20">
+        <div className="absolute top-24 md:top-32 left-6 md:left-12 z-20">
           <span className="font-inter text-xs font-bold tracking-[0.3em] uppercase text-primary mb-3 block">
             OUR FLEET
           </span>
