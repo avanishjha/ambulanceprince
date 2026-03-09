@@ -3,14 +3,29 @@ import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 
 export default function AppointmentForm() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const date = formData.get('date');
+    const unit = formData.get('unit');
+    const service = formData.get('service');
+
+    const message = `*New Appointment Request* 🚑\n\n*Name:* ${name}\n*Email:* ${email}\n*Date & Time:* ${date}\n*Unit Needed:* ${unit || 'Not specified'}\n*Service Type:* ${service || 'Not specified'}\n\nPlease confirm my booking.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/918178231291?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <section id="appointment" className="bg-gray-50 text-gray-900 py-16 md:py-32 border-b border-gray-200 relative overflow-hidden">
-      
+
       {/* Accent block */}
       <div className="absolute bottom-0 left-0 w-2 h-full bg-primary" />
-      
+
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16">
-        
+
         <div className="lg:w-1/3">
           <motion.span
             initial={{ opacity: 0 }}
@@ -43,12 +58,13 @@ export default function AppointmentForm() {
         </div>
 
         <div className="lg:w-2/3">
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-            
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Your Name</label>
-              <input 
-                type="text" 
+              <input
+                type="text"
+                name="name"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
                 placeholder="JOHN DOE"
                 required
@@ -57,8 +73,9 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Email Address</label>
-              <input 
-                type="email" 
+              <input
+                type="email"
+                name="email"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
                 placeholder="JOHN@EXAMPLE.COM"
                 required
@@ -67,8 +84,9 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Select Date & Time</label>
-              <input 
-                type="datetime-local" 
+              <input
+                type="datetime-local"
+                name="date"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
                 required
               />
@@ -76,7 +94,7 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Choose Doctor / Unit</label>
-              <select defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
+              <select name="unit" defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
                 <option value="" disabled>SELECT UNIT</option>
                 <option value="paramedic">Paramedic Team</option>
                 <option value="doctor">Specialized Doctor</option>
@@ -86,7 +104,7 @@ export default function AppointmentForm() {
 
             <div className="flex flex-col gap-2 md:col-span-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Select Services</label>
-              <select defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
+              <select name="service" defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
                 <option value="" disabled>SELECT SERVICE</option>
                 <option value="bls">Basic Life Support (BLS)</option>
                 <option value="als">Advance Life Support (ALS)</option>
@@ -96,15 +114,15 @@ export default function AppointmentForm() {
             </div>
 
             <div className="md:col-span-2 mt-4">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="group w-full flex items-center justify-center gap-3 bg-primary text-white font-poppins font-black text-xl tracking-tighter uppercase py-6 hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20"
               >
                 <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 MAKE APPOINTMENT
               </button>
             </div>
-            
+
           </form>
         </div>
 

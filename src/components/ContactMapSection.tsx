@@ -3,6 +3,19 @@ import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 
 export default function ContactMapSection() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const messageContent = formData.get('message');
+
+    const message = `*New Contact Message* 💬\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Message:*\n${messageContent}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/918178231291?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <section id="contact" className="bg-white text-gray-900 py-16 md:py-32 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16">
@@ -65,11 +78,12 @@ export default function ContactMapSection() {
           <h3 className="font-poppins font-black text-3xl uppercase tracking-tighter mb-2">Send Us a Message</h3>
           <p className="font-inter text-sm text-gray-400 mb-8 uppercase tracking-widest">Your email address will not be published*</p>
           
-          <form className="flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Name</label>
               <input 
                 type="text" 
+                name="name"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
                 placeholder="JOHN DOE"
                 required
@@ -80,6 +94,7 @@ export default function ContactMapSection() {
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">E-Mail</label>
               <input 
                 type="email" 
+                name="email"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
                 placeholder="JOHN@EXAMPLE.COM"
                 required
@@ -89,6 +104,7 @@ export default function ContactMapSection() {
             <div className="flex flex-col gap-2">
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Message</label>
               <textarea 
+                name="message"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full resize-none h-32 focus:border-primary transition-colors"
                 placeholder="HOW CAN WE HELP?"
                 required
