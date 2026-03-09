@@ -5,6 +5,7 @@ import SmoothScroller from '@/components/SmoothScroller';
 import NavigationalHeader from '@/components/NavigationalHeader';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
+import Preloader from '@/components/Preloader';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen bg-white text-gray-900 selection:bg-primary selection:text-white`}>
+        <Preloader />
         <SmoothScroller>
           <NavigationalHeader />
           <main className="flex-grow">{children}</main>
