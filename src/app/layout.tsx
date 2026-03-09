@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen selection:bg-primary selection:text-white`}>
+      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen bg-white text-gray-900 selection:bg-primary selection:text-white`}>
         <SmoothScroller>
           <NavigationalHeader />
           <main className="flex-grow">{children}</main>

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
@@ -29,30 +30,49 @@ export default function FaqProtocol() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white text-black py-32 border-b border-black">
+    <section className="bg-white text-gray-900 py-24 md:py-32 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16">
         
         {/* FAQ Accordion */}
-        <div className="lg:w-[60%] border-t border-black">
-          <div className="mb-16 pt-8">
-            <h2 className="font-poppins font-black text-5xl md:text-7xl leading-none tracking-tighter uppercase mb-2">
-              CRITICAL <br/> <span className="text-primary italic">INTEL.</span>
-            </h2>
-            <p className="font-inter text-sm uppercase tracking-widest font-bold text-black/50">Frequently Asked Questions</p>
+        <div className="lg:w-[60%]">
+          <div className="mb-12">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="font-inter text-xs font-bold tracking-[0.3em] uppercase text-primary mb-4 block"
+            >
+              FAQ
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="font-poppins font-black text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter uppercase mb-2"
+            >
+              CRITICAL{' '}
+              <span className="text-primary italic">INTEL.</span>
+            </motion.h2>
+            <p className="font-inter text-base text-gray-500">Frequently Asked Questions</p>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col border-t-2 border-gray-200">
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-black">
+              <div key={i} className="border-b-2 border-gray-200">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full text-left py-8 flex justify-between items-center group"
+                  className="w-full text-left py-6 flex justify-between items-center group gap-4"
                 >
-                  <span className="font-inter text-xl md:text-2xl font-bold pr-8 group-hover:text-primary transition-colors">
+                  <span className="font-inter text-lg md:text-xl font-bold pr-4 group-hover:text-primary transition-colors">
                     {faq.q}
                   </span>
-                  <span className={`w-8 h-8 flex items-center justify-center border border-black rounded-none shrink-0 transition-all ${openIndex === i ? 'bg-black text-white' : 'group-hover:bg-primary group-hover:text-white group-hover:border-primary'}`}>
-                    {openIndex === i ? '-' : '+'}
+                  <span className={`w-10 h-10 flex items-center justify-center border-2 shrink-0 transition-all ${
+                    openIndex === i 
+                      ? 'bg-primary border-primary text-white rotate-180' 
+                      : 'border-gray-300 text-gray-400 group-hover:border-primary group-hover:text-primary'
+                  }`}>
+                    <ChevronDown className="w-5 h-5" />
                   </span>
                 </button>
                 <AnimatePresence>
@@ -63,7 +83,7 @@ export default function FaqProtocol() {
                       exit={{ height: 0, opacity: 0 }}
                       className="overflow-hidden"
                     >
-                      <p className="font-inter text-lg text-black/70 pb-8 pr-12">
+                      <p className="font-inter text-base text-gray-600 pb-6 pr-16 leading-relaxed">
                         {faq.a}
                       </p>
                     </motion.div>
@@ -74,18 +94,18 @@ export default function FaqProtocol() {
           </div>
         </div>
 
-        {/* Cinematic Image */}
+        {/* Image */}
         <div className="lg:w-[40%]">
-          <div className="sticky top-32 w-full aspect-[3/4] overflow-hidden border border-black grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="sticky top-32 w-full aspect-[3/4] overflow-hidden border-2 border-gray-200 grayscale hover:grayscale-0 transition-all duration-700 relative group">
             <img 
               src="https://images.unsplash.com/photo-1516841273335-e39b37888115?w=800&q=80" 
               alt="Inside ICU Ambulance" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            {/* Minimalist Overlay */}
-            <div className="absolute inset-0 flex items-start justify-end p-6 pointer-events-none mix-blend-difference">
-              <span className="font-poppins font-bold text-sm tracking-widest text-white uppercase border border-white px-3 py-1">
-                INTERIOR VIEW
+            {/* Overlay badge */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+              <span className="font-poppins font-bold text-sm tracking-widest text-white uppercase">
+                ADVANCED ICU INTERIOR
               </span>
             </div>
           </div>

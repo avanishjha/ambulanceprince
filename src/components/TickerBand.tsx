@@ -1,39 +1,31 @@
 'use client';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 export default function TickerBand() {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setOffset(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const phrases = [
     "EMERGENCY HOTLINE +91-8178231291",
-    "• ADVANCED LIFE SUPPORT",
-    "• RAPID URBAN DISPATCH",
-    "• AIR AMBULANCE ON CALL",
+    "● ADVANCED LIFE SUPPORT",
+    "● RAPID URBAN DISPATCH",
+    "● AIR AMBULANCE ON CALL",
     "EMERGENCY HOTLINE +91-8178231291",
-    "• 24/7 MEDICAL NETWORK",
-    "• ZERO HIDDEN COSTS",
+    "● 24/7 MEDICAL NETWORK",
+    "● ZERO HIDDEN COSTS",
+    "● ICU ON WHEELS",
   ];
 
+  const content = [...phrases, ...phrases].join("   ");
+
   return (
-    <div className="w-full bg-primary text-white border-y border-black overflow-hidden py-4 flex items-center">
-      <motion.div 
-        className="flex whitespace-nowrap gap-12 font-poppins font-black text-2xl md:text-4xl tracking-tighter uppercase"
-        style={{ x: -offset * 0.5 }}
-      >
-        {/* Repeat array to ensure infinite feeling */}
-        {[...phrases, ...phrases, ...phrases].map((phrase, i) => (
-          <span key={i}>{phrase}</span>
-        ))}
-      </motion.div>
+    <div className="w-full bg-primary text-white border-y-2 border-primary overflow-hidden py-5 flex items-center relative">
+      {/* Double content for seamless loop */}
+      <div className="flex whitespace-nowrap animate-marquee">
+        <span className="font-poppins font-black text-xl md:text-3xl tracking-tighter uppercase mr-8">
+          {content}
+        </span>
+        <span className="font-poppins font-black text-xl md:text-3xl tracking-tighter uppercase mr-8">
+          {content}
+        </span>
+      </div>
     </div>
   );
 }
