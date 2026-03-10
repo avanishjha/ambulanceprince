@@ -8,6 +8,7 @@ import FaqProtocol from '@/components/FaqProtocol';
 import AppointmentForm from '@/components/AppointmentForm';
 import ContactMapSection from '@/components/ContactMapSection';
 import FleetShowcase from '@/components/FleetShowcase';
+import ServicesSection from '@/components/ServicesSection';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <AppointmentForm />
       <ContactMapSection />
       <FleetShowcase />
+      <ServicesSection />
     </div>
   );
 }

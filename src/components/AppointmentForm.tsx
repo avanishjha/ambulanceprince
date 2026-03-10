@@ -96,9 +96,9 @@ export default function AppointmentForm() {
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Choose Doctor / Unit</label>
               <select name="unit" defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
                 <option value="" disabled>SELECT UNIT</option>
-                <option value="paramedic">Paramedic Team</option>
-                <option value="doctor">Specialized Doctor</option>
-                <option value="general">General Transport</option>
+                <option value="Paramedic Team">Paramedic Team</option>
+                <option value="Specialized Doctor">Specialized Doctor</option>
+                <option value="General Transport">General Transport</option>
               </select>
             </div>
 
@@ -106,10 +106,13 @@ export default function AppointmentForm() {
               <label className="font-poppins font-bold text-xs tracking-widest text-gray-400 uppercase">Select Services</label>
               <select name="service" defaultValue="" className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 w-full appearance-none cursor-pointer focus:border-primary transition-colors">
                 <option value="" disabled>SELECT SERVICE</option>
-                <option value="bls">Basic Life Support (BLS)</option>
-                <option value="als">Advance Life Support (ALS)</option>
-                <option value="icu">ICU Ambulance</option>
-                <option value="air">Air Ambulance</option>
+                <option value="Basic Life Support (BLS)">Basic Life Support (BLS)</option>
+                <option value="ICU Ambulance">ICU Ambulance</option>
+                <option value="Air Ambulance">Air Ambulance</option>
+                <option value="Deadbody Transportation">Deadbody Transportation</option>
+                <option value="Hearse Van Services">Hearse Van Services</option>
+                <option value="Freezer Box Services">Freezer Box Services</option>
+                <option value="Cremation Services">Cremation Services</option>
               </select>
             </div>
 
