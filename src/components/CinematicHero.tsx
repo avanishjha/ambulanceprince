@@ -104,7 +104,7 @@ export default function CinematicHero() {
               className="absolute bottom-4 right-0 lg:bottom-10 lg:right-4 z-30 bg-white border-4 border-gray-900 text-gray-900 p-3 md:p-6 transform rotate-3 hover:rotate-0 transition-transform shadow-[6px_6px_0px_0px_rgba(230,57,70,1)] md:shadow-[8px_8px_0px_0px_rgba(230,57,70,1)]"
             >
               <div className="font-poppins font-black text-2xl md:text-4xl text-primary leading-none">10 MIN</div>
-              <div className="font-inter font-black text-[9px] md:text-xs tracking-[0.2em] uppercase mt-1">AVG ETA</div>
+              <div className="font-inter font-black text-[9px] md:text-xs tracking-[0.2em] uppercase mt-1">QUICK RESPONSE TIME</div>
             </motion.div>
           </motion.div>
         </div>

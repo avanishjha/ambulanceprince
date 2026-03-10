@@ -18,7 +18,7 @@ export default function Preloader() {
     // 2.5 seconds gives enough time for a beautiful sequence
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 1200);
 
     return () => {
       clearTimeout(timer);
@@ -33,7 +33,7 @@ export default function Preloader() {
           key="preloader"
           initial={{ y: 0 }}
           exit={{ y: '-100%' }}
-          transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-gray-950 text-white"
         >
           {/* Animated Background Grid Pattern */}
@@ -44,13 +44,13 @@ export default function Preloader() {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
               className="relative w-24 h-24 sm:w-32 sm:h-32 mb-8 bg-primary flex items-center justify-center -skew-x-12 overflow-hidden shadow-[0_0_40px_rgba(235,10,30,0.4)]"
             >
               <motion.div
                 initial={{ x: '-100%', opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+                transition={{ duration: 0.4, delay: 0.2, ease: 'easeOut' }}
                 className="font-poppins font-black text-5xl sm:text-7xl text-white skew-x-12 tracking-tighter"
               >
                 +
@@ -59,7 +59,7 @@ export default function Preloader() {
               <motion.div
                 initial={{ x: '-100%' }}
                 animate={{ x: '200%' }}
-                transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
                 className="absolute inset-0 w-1/2 bg-white/20 skew-x-[30deg]"
               />
             </motion.div>
@@ -69,7 +69,7 @@ export default function Preloader() {
               <motion.h1
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6, ease: [0.33, 1, 0.68, 1] }}
+                transition={{ duration: 0.4, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
                 className="font-poppins font-black text-3xl sm:text-5xl tracking-tighter uppercase mb-2 text-center"
               >
                 PRINCE <span className="text-primary">AMBULANCE</span>
@@ -80,7 +80,7 @@ export default function Preloader() {
               <motion.p
                 initial={{ y: '100%', opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8, ease: [0.33, 1, 0.68, 1] }}
+                transition={{ duration: 0.4, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
                 className="font-inter text-xs sm:text-sm font-bold tracking-[0.3em] text-gray-400 uppercase text-center"
               >
                 Emergency Medical Services
@@ -92,7 +92,7 @@ export default function Preloader() {
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
-                transition={{ duration: 2, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 className="h-full bg-primary"
               />
             </div>
@@ -101,7 +101,7 @@ export default function Preloader() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
               className="mt-4 font-inter text-[10px] tracking-widest text-gray-500 uppercase"
             >
               INITIALIZING SYSTEMS...
