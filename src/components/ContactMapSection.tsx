@@ -13,7 +13,7 @@ export default function ContactMapSection() {
     const message = `*New Contact Message* 💬\n\n*Name:* ${name}\n*Email:* ${email}\n\n*Message:*\n${messageContent}`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/918178231291?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/918810616863?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -56,7 +56,7 @@ export default function ContactMapSection() {
             <div className="mb-12">
               <h4 className="font-poppins font-bold text-lg uppercase tracking-widest text-primary mb-4">Customer Support</h4>
               <div className="flex flex-col gap-2 font-inter text-2xl font-black tracking-tighter">
-                <a href="tel:+918178231291" className="hover:text-primary transition-colors">+91-8178231291</a>
+                <a href="tel:+918810616863" className="hover:text-primary transition-colors">+91-8810616863</a>
                 <a href="tel:+919717946941" className="hover:text-primary transition-colors">+91-9717946941</a>
               </div>
             </div>

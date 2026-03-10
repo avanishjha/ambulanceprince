@@ -15,7 +15,7 @@ export default function AppointmentForm() {
     const message = `*New Appointment Request* 🚑\n\n*Name:* ${name}\n*Email:* ${email}\n*Date & Time:* ${date}\n*Unit Needed:* ${unit || 'Not specified'}\n*Service Type:* ${service || 'Not specified'}\n\nPlease confirm my booking.`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/918178231291?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/918810616863?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -52,7 +52,7 @@ export default function AppointmentForm() {
           <div className="p-4 bg-primary/5 border border-primary/20">
             <p className="font-inter text-sm text-primary font-bold">
               ⚠ For immediate life-threatening emergencies, call{' '}
-              <a href="tel:+918178231291" className="underline">+91-8178231291</a>
+              <a href="tel:+918810616863" className="underline">+91-8810616863</a>
             </p>
           </div>
         </div>

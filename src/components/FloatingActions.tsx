@@ -24,7 +24,7 @@ export default function FloatingActions() {
       {/* Bottom Left: WhatsApp & Phone */}
       <div className="absolute bottom-6 left-6 flex flex-col gap-4 pointer-events-auto">
         <a 
-          href="https://wa.me/918178231291" 
+          href="https://wa.me/918810616863" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-[#25D366]/30"
@@ -36,7 +36,7 @@ export default function FloatingActions() {
           </svg>
         </a>
         <a 
-          href="tel:+918178231291" 
+          href="tel:+918810616863" 
           className="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-primary/30"
           aria-label="Call Us"
         >

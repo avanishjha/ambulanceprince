@@ -9,23 +9,33 @@ const services = [
     icon: <HeartPulse className="w-8 h-8 text-primary" />,
   },
   {
-    title: 'Advanced Life Support',
-    description: 'ALS ambulances with comprehensive emergency medical equipment.',
-    icon: <Stethoscope className="w-8 h-8 text-primary" />,
-  },
-  {
     title: 'ICU Ambulance',
     description: 'Mobile intensive care unit with ventilators and cardiac monitors.',
     icon: <Activity className="w-8 h-8 text-primary" />,
   },
   {
-    title: 'Air Ambulance',
+    title: 'Air Ambulance - International Also',
     description: 'Rapid aeromedical transport for critical out-of-city emergencies.',
     icon: <Plane className="w-8 h-8 text-primary" />,
   },
   {
-    title: 'Dead Body Transport',
-    description: 'Respectful mortuary freeze box ambulance services.',
+    title: 'Deadbody Transportation',
+    description: 'Respectful mortuary ambulance services.',
+    icon: <Box className="w-8 h-8 text-primary" />,
+  },
+  {
+    title: 'Hearse Van Services',
+    description: 'Dignified transportation for the deceased.',
+    icon: <Box className="w-8 h-8 text-primary" />,
+  },
+  {
+    title: 'Freezer Box Services',
+    description: 'Preservation services for longer transport or waiting periods.',
+    icon: <Box className="w-8 h-8 text-primary" />,
+  },
+  {
+    title: 'Cremation Services',
+    description: 'End-to-end assistance with final rites.',
     icon: <Box className="w-8 h-8 text-primary" />,
   },
   {

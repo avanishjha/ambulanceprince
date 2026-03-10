@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     q: "How do I contact Prince Ambulance Service in an emergency?",
-    a: "You can reach Prince Ambulance Service 24/7 by calling our emergency hotline at +91-8178231291. Our dispatch team will immediately send the nearest available ambulance to your location."
+    a: "You can reach Prince Ambulance Service 24/7 by calling our emergency hotline at +91-8810616863. Our dispatch team will immediately send the nearest available ambulance to your location."
   },
   {
     q: "What types of medical emergencies do you handle?",

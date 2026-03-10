@@ -2,7 +2,6 @@ import CinematicHero from '@/components/CinematicHero';
 import TickerBand from '@/components/TickerBand';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ServiceManifesto from '@/components/ServiceManifesto';
-import DataPoints from '@/components/DataPoints';
 import ServiceLocations from '@/components/ServiceLocations';
 import GroundTruth from '@/components/GroundTruth';
 import FaqProtocol from '@/components/FaqProtocol';
@@ -17,7 +16,6 @@ export default function Home() {
       <TickerBand />
       <WhyChooseUs />
       <ServiceManifesto />
-      <DataPoints />
       <ServiceLocations />
       <GroundTruth />
       <FaqProtocol />

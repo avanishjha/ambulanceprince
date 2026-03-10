@@ -3,11 +3,11 @@ import { useRef, useEffect, useState } from 'react';
 
 export default function TickerBand() {
   const phrases = [
-    "EMERGENCY HOTLINE +91-8178231291",
+    "EMERGENCY HOTLINE +91-8810616863",
     "● ADVANCED LIFE SUPPORT",
     "● RAPID URBAN DISPATCH",
     "● AIR AMBULANCE ON CALL",
-    "EMERGENCY HOTLINE +91-8178231291",
+    "EMERGENCY HOTLINE +91-8810616863",
     "● 24/7 MEDICAL NETWORK",
     "● ZERO HIDDEN COSTS",
     "● ICU ON WHEELS",
