@@ -64,7 +64,7 @@ export default function CinematicHero() {
             </a>
             <a href="#appointment" className="group flex items-center justify-center gap-3 bg-white text-gray-900 border-4 border-gray-900 px-6 sm:px-8 py-4 font-poppins font-black text-base sm:text-lg uppercase tracking-wider hover:bg-gray-100 transition-colors shadow-[4px_4px_0px_0px_rgba(230,57,70,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
               <Calendar className="w-5 h-5" />
-              BOOKING
+              CHAT NOW
             </a>
           </motion.div>
 
