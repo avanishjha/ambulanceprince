@@ -66,7 +66,7 @@ export default function AppointmentForm() {
                 type="text"
                 name="name"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
-                placeholder="JOHN DOE"
+                placeholder="AARAV SHARMA"
                 required
               />
             </div>
@@ -77,7 +77,7 @@ export default function AppointmentForm() {
                 type="email"
                 name="email"
                 className="bg-white border-2 border-gray-200 px-4 py-4 outline-none font-inter text-lg text-gray-900 placeholder-gray-300 w-full focus:border-primary transition-colors"
-                placeholder="JOHN@EXAMPLE.COM"
+                placeholder="AARAV@EXAMPLE.COM"
                 required
               />
             </div>

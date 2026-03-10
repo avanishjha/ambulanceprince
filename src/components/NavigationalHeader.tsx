@@ -33,7 +33,7 @@ export default function NavigationalHeader() {
         {/* CTA Section */}
         <div className="flex items-center gap-4 pr-4 md:pr-8">
           {/* Appointment Button */}
-          <a href="#appointment" className="hidden lg:block font-inter text-xs font-bold tracking-widest uppercase text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors px-6 py-3.5 rounded-sm border-b-4 border-gray-300 active:border-b-0 active:translate-y-1">
+          <a href="https://wa.me/918810616863?text=Hi%2C%20I%27m%20in%20need%20of%20your%20service" target="_blank" rel="noopener noreferrer" className="hidden lg:block font-inter text-xs font-bold tracking-widest uppercase text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors px-6 py-3.5 rounded-sm border-b-4 border-gray-300 active:border-b-0 active:translate-y-1">
             Chat Now
           </a>
 

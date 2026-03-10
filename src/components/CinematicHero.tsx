@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 
 export default function CinematicHero() {
   return (
@@ -62,8 +62,8 @@ export default function CinematicHero() {
               <Phone className="w-5 h-5 group-hover:animate-ping" />
               CALL NOW
             </a>
-            <a href="#appointment" className="group flex items-center justify-center gap-3 bg-white text-gray-900 border-4 border-gray-900 px-6 sm:px-8 py-4 font-poppins font-black text-base sm:text-lg uppercase tracking-wider hover:bg-gray-100 transition-colors shadow-[4px_4px_0px_0px_rgba(230,57,70,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
-              <Calendar className="w-5 h-5" />
+            <a href="https://wa.me/918810616863?text=Hi%2C%20I%27m%20in%20need%20of%20your%20service" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-3 bg-white text-gray-900 border-4 border-gray-900 px-6 sm:px-8 py-4 font-poppins font-black text-base sm:text-lg uppercase tracking-wider hover:bg-gray-100 transition-colors shadow-[4px_4px_0px_0px_rgba(230,57,70,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
+              <MessageCircle className="w-5 h-5" />
               CHAT NOW
             </a>
           </motion.div>
