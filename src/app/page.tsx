@@ -16,7 +16,6 @@ export default function Home() {
       <TickerBand />
       <WhyChooseUs />
       <ServiceManifesto />
-      <ServiceLocations />
       <GroundTruth />
       <FaqProtocol />
       <AppointmentForm />
