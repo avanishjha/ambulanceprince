@@ -14,11 +14,11 @@ export default function CinematicHero() {
       </div>
 
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 mt-10 lg:mt-0">
-        
+
         {/* Left Side: Typography */}
         <div className="w-full lg:w-[45%] flex flex-col z-20">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -26,33 +26,33 @@ export default function CinematicHero() {
           >
             <div className="w-12 h-1 bg-primary" />
             <span className="font-inter font-bold text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-500">
-              PRINCE EMERGENCY CARE
+              PRINCE AMBULANCE
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="font-poppins font-black text-5xl sm:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] leading-[0.85] tracking-tight uppercase text-gray-900 mb-8"
           >
-            WE<br/>
-            SAVE<br/>
+            WE<br />
+            SAVE<br />
             <span className="text-primary mix-blend-multiply">LIVES.</span>
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
             className="font-inter font-medium text-sm sm:text-base md:text-lg text-gray-500 max-w-lg mb-10 leading-relaxed border-l-4 border-gray-200 pl-4 sm:pl-6"
           >
-            Fast, reliable, and compassionate emergency medical transport 24/7. 
-            From critical ICU situations to non-emergency transfers, our highly 
+            Fast, reliable, and compassionate emergency medical transport 24/7.
+            From critical ICU situations to non-emergency transfers, our highly
             trained team ensures safe and timely care.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -79,12 +79,12 @@ export default function CinematicHero() {
             className="relative w-full flex justify-center lg:justify-end"
           >
             {/* The Image */}
-            <img 
-              src="/images/ambulance.png" 
-              alt="Prince Ambulance" 
+            <img
+              src="/images/ambulance.png"
+              alt="Prince Ambulance"
               className="w-full max-w-[600px] lg:max-w-[700px] xl:max-w-[850px] h-auto object-contain relative z-20 drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
             />
-            
+
             {/* 24/7 Brutalist Badge */}
             <motion.div
               initial={{ scale: 0 }}
