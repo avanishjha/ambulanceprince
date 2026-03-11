@@ -22,7 +22,6 @@ export default function Home() {
       <AppointmentForm />
       <ContactMapSection />
       <FleetShowcase />
-      <ServicesSection />
     </div>
   );
 }
