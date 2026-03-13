@@ -51,7 +51,7 @@ export default function ContactMapSection() {
         {/* Map */}
         <div className="w-full h-[400px] lg:h-auto bg-gray-100 border-2 border-gray-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.213197143997!2d77.23467667623956!3d28.65334408314115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce1df9bb77b%3A0x6bbaec4ac397d953!2sSushruta%20Trauma%20Centre!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7003.3654283428!2d77.238199!3d28.63927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd27b3316b6d%3A0xa9d62fda6be69577!2sLok%20Nayak%20Hospital%2CDelhi!5e0!3m2!1sen!2sin!4v1773421751079!5m2!1sen!2sin" 
             className="absolute inset-0 w-full h-full border-0" 
             allowFullScreen={false} 
             loading="lazy" 

@@ -21,7 +21,6 @@ export default function Home() {
       <FaqProtocol />
       <AppointmentForm />
       <ContactMapSection />
-      <FleetShowcase />
     </div>
   );
 }
