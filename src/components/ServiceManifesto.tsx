@@ -8,19 +8,19 @@ const services = [
     num: "01",
     title: "BASIC LIFE SUPPORT",
     desc: "Essential transport designed to provide critical care and emergency medical assistance for non-critical patients.",
-    img: "https://images.unsplash.com/photo-1587556201565-2ea642111eb3?w=1200&q=80"
+    img: "/images/basic life support.jpeg"
   },
   {
     num: "02",
     title: "ICU AMBULANCE",
     desc: "When time is of the essence, specialized medical care on wheels featuring ventilators and intensive monitoring.",
-    img: "https://plus.unsplash.com/premium_photo-1661608670417-104c9302ca14?w=1200&q=80"
+    img: "/images/ICU-Ambulance-Service-Provider.webp"
   },
   {
     num: "03",
     title: "AIR AMBULANCE",
     desc: "Rapid aeromedical evacuation for inter-city and international emergencies. Reach the best hospitals in record time.",
-    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80"
+    img: "/images/international-air-ambulance.jpg"
   },
   {
     num: "04",
@@ -129,7 +129,7 @@ export default function ServiceManifesto() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-full object-cover grayscale blur-[1px] group-hover:grayscale-0 group-hover:blur-0 group-hover:scale-105 transition-all duration-700 origin-center"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 origin-center"
                 />
               </div>
             </motion.div>
