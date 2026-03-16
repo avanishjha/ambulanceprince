@@ -98,6 +98,7 @@ export default function AppointmentForm() {
                 <option value="" disabled>SELECT UNIT</option>
                 <option value="Paramedic Team">Paramedic Team</option>
                 <option value="Specialized Doctor">Specialized Doctor</option>
+                <option value="Critical Care Team">Critical Care Team</option>
                 <option value="General Transport">General Transport</option>
               </select>
             </div>
@@ -113,6 +114,7 @@ export default function AppointmentForm() {
                 <option value="Hearse Van Services">Hearse Van Services</option>
                 <option value="Freezer Box Services">Freezer Box Services</option>
                 <option value="Cremation Services">Cremation Services</option>
+                <option value="Critical Care Retrieval Teams">Critical Care Retrieval Teams</option>
               </select>
             </div>
 

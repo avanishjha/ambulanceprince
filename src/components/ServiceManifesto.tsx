@@ -26,25 +26,31 @@ const services = [
     num: "04",
     title: "DEADBODY TRANSPORTATION",
     desc: "Respectful and timely mortuary ambulance services for the deceased.",
-    img: "https://images.unsplash.com/photo-1535399596356-8a9d18b6e6c7?w=1200&q=80"
+    img: "/images/deadbodytransporation.jpeg"
   },
   {
     num: "05",
     title: "HEARSE VAN SERVICES",
     desc: "Dignified transportation with fully equipped hearse vans for final journeys.",
-    img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"
+    img: "/images/heresevan.jpeg"
   },
   {
     num: "06",
     title: "FREEZER BOX SERVICES",
     desc: "Preservation services ensuring the utmost care during longer waiting periods or transport.",
-    img: "https://images.unsplash.com/photo-1519494026892-80ba4c017ebb?w=1200&q=80"
+    img: "/images/deadbodyfreezer.jpeg"
   },
   {
     num: "07",
     title: "CREMATION SERVICES",
     desc: "Compassionate, end-to-end assistance with final rites and necessary arrangements.",
-    img: "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=1200&q=80"
+    img: "/images/cremation.jpeg"
+  },
+  {
+    num: "08",
+    title: "CRITICAL CARE RETRIEVAL TEAMS",
+    desc: "Dedicated teams including a doctor, technician, and trained helpers for patients requiring continuous medical supervision and safe handling during transport.",
+    img: "/images/Ventilator-Ambulance.jpg.jpeg"
   }
 ];
 
@@ -114,7 +120,7 @@ export default function ServiceManifesto() {
                 </p>
 
                 <div className="pl-[3.5rem]">
-                  <a href="https://wa.me/918810616863?text=Hi%2C%20I%27m%20in%20need%20of%20your%20service" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 group/btn font-poppins font-bold uppercase tracking-widest text-sm text-gray-900 hover:text-primary transition-colors">
+                  <a href={`https://wa.me/918810616863?text=Hi%2C%20I%27m%20inquiring%20about%20${encodeURIComponent(service.title)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 group/btn font-poppins font-bold uppercase tracking-widest text-sm text-gray-900 hover:text-primary transition-colors">
                     <span className="border-b-2 border-gray-900 group-hover/btn:border-primary pb-1">INQUIRE NOW</span>
                     <div className="w-8 h-8 rounded-full border border-gray-300 group-hover/btn:border-primary flex items-center justify-center">
                       <ArrowUpRight className="w-4 h-4 text-gray-500 group-hover/btn:text-primary group-hover/btn:rotate-45 transition-all" />
