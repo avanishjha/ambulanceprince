@@ -1,7 +1,11 @@
 'use client';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function NavigationalHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
@@ -26,7 +30,7 @@ export default function NavigationalHeader() {
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex gap-8 font-inter text-xs tracking-[0.2em] uppercase text-gray-700 font-bold">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-          <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
+          <Link href="#services-manifesto" className="hover:text-primary transition-colors">Services</Link>
           <Link href="#contact" className="hover:text-primary transition-colors">Contact Us</Link>
         </nav>
 
@@ -45,9 +49,54 @@ export default function NavigationalHeader() {
               CALL
             </span>
           </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-900 hover:text-primary focus:outline-none ml-2"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 flex flex-col py-4 px-6 space-y-4">
+          <Link 
+            href="/" 
+            onClick={() => setIsOpen(false)}
+            className="font-inter text-sm font-bold tracking-widest uppercase text-gray-700 hover:text-primary transition-colors py-2 border-b border-gray-50"
+          >
+            Home
+          </Link>
+          <Link 
+            href="#services-manifesto" 
+            onClick={() => setIsOpen(false)}
+            className="font-inter text-sm font-bold tracking-widest uppercase text-gray-700 hover:text-primary transition-colors py-2 border-b border-gray-50"
+          >
+            Services
+          </Link>
+          <Link 
+            href="#contact" 
+            onClick={() => setIsOpen(false)}
+            className="font-inter text-sm font-bold tracking-widest uppercase text-gray-700 hover:text-primary transition-colors py-2 border-b border-gray-50"
+          >
+            Contact Us
+          </Link>
+          <div className="pt-2">
+            <a 
+              href="https://wa.me/918810616863?text=Hi%2C%20I%27m%20in%20need%20of%20your%20service" 
+              onClick={() => setIsOpen(false)}
+              target="_blank" rel="noopener noreferrer"
+              className="block w-full text-center font-inter text-sm font-bold tracking-widest uppercase text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors px-6 py-3.5 rounded-sm border-b-4 border-gray-300 active:border-b-0 active:translate-y-1"
+            >
+              Chat Now On WhatsApp
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

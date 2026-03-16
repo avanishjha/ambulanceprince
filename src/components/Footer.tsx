@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -48,8 +49,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-end gap-8 font-inter font-bold uppercase text-xs">
           <p>&copy; {new Date().getFullYear()} PRINCE AMBULANCE. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-black transition-colors">PRIVACY PROTOCOL</a>
-            <a href="#" className="hover:text-black transition-colors">TERMS OF SERVICE</a>
+            <Link href="/privacy" className="hover:text-black transition-colors">PRIVACY PROTOCOL</Link>
+            <Link href="/terms" className="hover:text-black transition-colors">TERMS OF SERVICE</Link>
           </div>
         </div>
 

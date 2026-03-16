@@ -71,8 +71,8 @@ export default function ServiceManifesto() {
               transition={{ duration: 0.8 }}
               className="font-poppins font-black text-4xl md:text-6xl lg:text-7xl uppercase tracking-tighter"
             >
-              A MANIFESTO OF{' '}
-              <span className="text-primary italic">SURVIVAL.</span>
+              OUR CORE{' '}
+              <span className="text-primary italic">SERVICES.</span>
             </motion.h2>
           </div>
           <motion.p
