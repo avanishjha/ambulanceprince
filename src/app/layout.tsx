@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 
@@ -25,6 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16718437314"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16718437314');`}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen bg-white text-gray-900 selection:bg-primary selection:text-white`}>
         {children}
       </body>
